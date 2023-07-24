@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glass {
+  place-items: center;
+  top:0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px #4747470b;
+  backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  @apply border-4 rounded-3xl w-[98vw] py-10 h-fit md:w-[75vw] lg:w-[60vw]; 
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  font: 900 60px "Roboto";
+}
+.colorPicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
