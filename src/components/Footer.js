@@ -25,9 +25,6 @@ const Footer = () => {
             <FaInstagram className="text-pink-600 text-[24px]" />
           </a>
         </span>
-        {/* <span className="w-[50px] h-[50px] rounded-[50%] bg-[var(--black3)] flex items-center justify-center ease-out duration-300 hover:shadow-[0_0_0_0.225em_#d4d4d8]">
-          <FaLinkedin />
-        </span> */}
       </div>
       <ul className="flex items-center justify-center mb-10 gap-[15px] mt-[20px] md:mt-[30px] md:gap-[30px]">
         <li className="text-[12px] md:text-[16px]">

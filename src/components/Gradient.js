@@ -52,7 +52,7 @@ const Gradient = () => {
 
   return (
     <>
-      <div className="container mx-auto mt-4">
+      <div className="container mx-auto my-10">
         <ToastContainer
           position="top-center"
           autoClose={1000}
@@ -96,7 +96,7 @@ const Gradient = () => {
                 <GrClipboard
                   style={{ cursor: "pointer" }}
                   onClick={notify}
-                  className="text-[20px]"
+                  className="text-[18px]"
                 />
               </CopyToClipboard>
             </div>

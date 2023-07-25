@@ -36,7 +36,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [lastScrollY]);
+  });
 
   const openMobileMenu = () => {
     setMobileMenu(true);

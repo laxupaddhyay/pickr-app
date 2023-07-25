@@ -39,7 +39,6 @@ const ColorShades = () => {
             transition={Zoom}
             hideProgressBar={false}
             newestOnTop={false}
-            closeOnClick={false}
             rtl={false}
             draggable={false}
             theme="dark"

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { GrCopy } from "react-icons/gr";
+import { GrClipboard } from "react-icons/gr";
 import { ToastContainer, Zoom, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -30,7 +30,7 @@ const Colors = () => {
 
   return (
     <>
-      <div className="container mx-auto mt-4">
+      <div className="container mx-auto my-10">
         <ToastContainer
           position="top-center"
           autoClose={1000}
@@ -67,10 +67,10 @@ const Colors = () => {
                 {output}
               </SyntaxHighlighter>
               <CopyToClipboard text={`${output}`}>
-                <GrCopy
+                <GrClipboard
                   style={{ cursor: "pointer" }}
                   onClick={notify}
-                  className="text-[20px]"
+                  className="text-[18px]"
                 />
               </CopyToClipboard>
             </div>
