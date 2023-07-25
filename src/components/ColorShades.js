@@ -35,9 +35,9 @@ const ColorShades = () => {
           </div>
           <ToastContainer
             position="top-center"
-            autoClose={1000}
+            autoClose={1500}
             transition={Zoom}
-            hideProgressBar={false}
+            hideProgressBar={true}
             newestOnTop={false}
             rtl={false}
             draggable={false}

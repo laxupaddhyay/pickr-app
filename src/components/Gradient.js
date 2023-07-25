@@ -22,17 +22,7 @@ const Gradient = () => {
     a: Math.round(Math.random() * 100) / 100,
   });
   const [output, setOutput] = useState();
-  const notify = () =>
-    toast.success("Copied to Clipboard!", {
-      position: "top-center",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: false,
-      progress: undefined,
-      theme: "dark",
-    });
+  const notify = () => toast.success("Copied to Clipboard!");
 
   useEffect(() => {
     const color1 = `rgba(${currentColor1["r"]},${currentColor1["g"]},${currentColor1["b"]},${currentColor1["a"]})`;
@@ -57,7 +47,7 @@ const Gradient = () => {
           position="top-center"
           autoClose={1000}
           transition={Zoom}
-          hideProgressBar={false}
+          hideProgressBar={true}
           newestOnTop={false}
           closeOnClick={false}
           rtl={false}

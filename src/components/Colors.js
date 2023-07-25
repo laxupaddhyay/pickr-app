@@ -35,7 +35,7 @@ const Colors = () => {
           position="top-center"
           autoClose={1000}
           transition={Zoom}
-          hideProgressBar={false}
+          hideProgressBar={true}
           newestOnTop={false}
           closeOnClick={false}
           rtl={false}
