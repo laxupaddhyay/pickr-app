@@ -18,7 +18,7 @@ const BrowseColor = ({ color, numShades }) => {
       <div className="flex flex-wrap justify-center">
         {shades.map((shade, index) => (
           <div
-            className="flex flex-col justify-center items-center w-[150px] h-[150px] m-[5px] border-[1px] border-black rounded-sm font-medium text-white text-lg"
+            className="flex flex-col justify-center items-center w-[150px] h-[150px] m-[5px] border-[1px] border-black rounded-md font-medium text-white text-lg"
             key={index}
             style={{ background: shade.hexString() }}
           >

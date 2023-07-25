@@ -2,7 +2,7 @@ import "./App.css";
 import Colors from "./components/Colors";
 import Gradient from "./components/Gradient";
 import ColorShades from "./components/ColorShades";
-import Navbar from "./components/Navbar";
+import Header from "./components/header/Header";
 import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -19,7 +19,7 @@ function App() {
       </div>
       <BrowserRouter>
         <header>
-          <Navbar />
+          <Header />
         </header>
 
         <main>

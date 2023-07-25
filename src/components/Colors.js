@@ -30,7 +30,7 @@ const Colors = () => {
 
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-4">
         <ToastContainer
           position="top-center"
           autoClose={1000}
@@ -42,14 +42,14 @@ const Colors = () => {
           draggable={false}
           theme="dark"
         />
-        <div className="flex flex-col justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center">
+          <div className="title flex flex-col items-center">
+            <h1 className="xs:text-5xl md:text-6xl font-bold">Colors</h1>
+            <span className="py-4 md:text-2xl sm:text-xl w-9/10 text-center xs:text-[12px] text-gray-900">
+              Select any color to copy hex code
+            </span>
+          </div>
           <div className="glass">
-            <div className="title flex flex-col items-center">
-              <h4 className="xs:text-5xl md:text-6xl font-bold">Colors</h4>
-              <span className="py-4 md:text-2xl sm:text-xl w-9/10 text-center xs:text-[12px] text-gray-500">
-                Select any color to copy hex code
-              </span>
-            </div>
             <div className="responsive">
               <RgbaColorPicker
                 color={currentColor}

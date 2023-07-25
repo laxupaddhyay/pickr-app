@@ -52,7 +52,7 @@ const Gradient = () => {
 
   return (
     <>
-      <div className="container mx-auto my-32 md:my-52">
+      <div className="container mx-auto mt-4">
         <ToastContainer
           position="top-center"
           autoClose={1000}
@@ -64,14 +64,14 @@ const Gradient = () => {
           draggable={false}
           theme="dark"
         />
-        <div className="flex flex-col justify-center place-items-center items-center h-screen">
+        <div className="flex flex-col justify-center place-items-center items-center">
+          <div className="title flex flex-col items-center">
+            <h1 className="xs:text-5xl md:text-6xl font-bold">Gradient</h1>
+            <span className="py-4 md:text-2xl sm:text-xl w-9/10 text-center xs:text-[12px] text-gray-900">
+              Select the colors to copy CSS code
+            </span>
+          </div>
           <div className="glass">
-            <div className="title flex flex-col items-center">
-              <h4 className="xs:text-5xl md:text-6xl font-bold">Gradient</h4>
-              <span className="py-4 md:text-2xl sm:text-xl w-9/10 text-center xs:text-[12px] text-gray-500">
-                Select the colors to copy CSS code
-              </span>
-            </div>
             <div className="responsive xs:flex xs:flex-col gap-4 md:gap-8">
               <RgbaColorPicker
                 color={currentColor1}

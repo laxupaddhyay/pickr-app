@@ -27,7 +27,12 @@ const ColorShades = () => {
   return (
     <>
       {colors.map((index) => (
-        <div key={index.id} className="py-10 px-4">
+        <div className="flex flex-col my-5">
+          <div className="title flex flex-col items-center">
+            <h1 className="xs:text-5xl md:text-6xl font-bold my-5">
+              {index.color.at(0).toUpperCase() + index.color.slice(1)}
+            </h1>
+          </div>
           <ToastContainer
             position="top-center"
             autoClose={1000}
@@ -39,9 +44,7 @@ const ColorShades = () => {
             draggable={false}
             theme="dark"
           />
-          <h1 className="text-4xl md:text-5xl mt-10">
-            {index.color.toUpperCase()}
-          </h1>
+
           <BrowseColor color={`${index.color}`} numShades={48} />
         </div>
       ))}
