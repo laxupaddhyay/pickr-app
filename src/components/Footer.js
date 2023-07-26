@@ -1,34 +1,47 @@
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
+const links = [
+  {
+    id: 1,
+    href: "https://github.com/SouravKAgarwal",
+    icon: <FaGithub />,
+  },
+  {
+    id: 2,
+    href: "https://www.linkedin.com/in/souravkragarwal/",
+    icon: <FaLinkedinIn />,
+  },
+  {
+    id: 3,
+    href: "https://www.twitter.com/souravk_agarwal/",
+    icon: <FaTwitter />,
+  },
+  {
+    id: 4,
+    href: "https://instagram.com/souravk_agarwal",
+    icon: <FaInstagram />,
+  },
+];
+
 const Footer = () => {
   return (
     <div className="flex items-center flex-col bg-transparent bg-center px-[50px] text-black">
-      <div className="flex items-center mt-10 justify-center gap-[10px]">
-        <span className="w-[50px] h-[50px] rounded-[50%] bg-[black] flex items-center justify-center ease-out duration-300 hover:shadow-[0_0_0_0.180em_gray]">
-          <a href="https://github.com/SouravKAgarwal">
-            <FaGithub className="text-[white] text-[24px]" />
-          </a>
-        </span>
-        <span className="w-[50px] h-[50px] rounded-[50%] bg-[black] flex items-center justify-center ease-out duration-300 hover:shadow-[0_0_0_0.180em_gray]">
-          <a href="https://www.linkedin.com/in/souravkragarwal/">
-            <FaLinkedinIn className="text-blue-600 text-[24px]" />
-          </a>
-        </span>
-        <span className="w-[50px] h-[50px] rounded-[50%] bg-[black] flex items-center justify-center ease-out duration-300 hover:shadow-[0_0_0_0.180em_gray]">
-          <a href="https://www.twitter.com/SouravK_Agarwal">
-            <FaTwitter className="text-blue-500 text-[24px]" />
-          </a>
-        </span>
-        <span className="w-[50px] h-[50px] rounded-[50%] bg-[black] flex items-center justify-center ease-out duration-300 hover:shadow-[0_0_0_0.180em_gray]">
-          <a href="https://instagram.com/souravk_agarwal">
-            <FaInstagram className="text-pink-600 text-[24px]" />
-          </a>
-        </span>
+      <div className="flex items-center mt-8 justify-center gap-[10px]">
+        {links.map(({ id, href, icon }) => (
+          <span
+            key={id}
+            className="md:w-[50px] md:h-[50px] w-[35px] h-[35px] rounded-[50%] bg-[black] flex items-center justify-center ease-out duration-300 hover:shadow-[0_0_0_0.180em_gray]"
+          >
+            <a href={href}>
+              <div className={`text-white text-md md:text-[24px]`}>{icon}</div>
+            </a>
+          </span>
+        ))}
       </div>
-      <ul className="flex items-center justify-center mb-10 gap-[15px] mt-[20px] md:mt-[30px] md:gap-[30px]">
+      <ul className="flex items-center justify-center mb-6 gap-4 mt-4 md:gap-8">
         <li className="text-[12px] md:text-[16px]">
-          <strong>Designed and &lt;/&gt; with &#129293;-SKA</strong>
+          <strong>Designed and &lt;/&gt; with &#129293;-Sourav</strong>
         </li>
       </ul>
     </div>

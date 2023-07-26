@@ -58,7 +58,7 @@ const Colors = () => {
             </div>
           </div>
           <div className="flex flex-col items-center my-10">
-            <div className="flex justify-center items-center bg-[#F8F8FF] text-[10px] md:text-[16px] rounded-xl p-3">
+            <div className="flex justify-center items-center bg-[#F8F8FF] text-[10px] md:text-lg rounded-xl p-3">
               <SyntaxHighlighter
                 language="css"
                 style={docco}

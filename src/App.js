@@ -2,7 +2,7 @@ import "./App.css";
 import Colors from "./components/Colors";
 import Gradient from "./components/Gradient";
 import ColorShades from "./components/ColorShades";
-import Header from "./components/header/Header";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

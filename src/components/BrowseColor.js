@@ -7,7 +7,7 @@ const BrowseColor = ({ color, numShades }) => {
   const [shades, setShades] = useState([]);
 
   useEffect(() => {
-    const shades = new Values(color).shades(100 / numShades);
+    const shades = new Values(color).shades(100 / numShades + 4);
     setShades(shades);
   }, [color, numShades]);
 
@@ -18,7 +18,7 @@ const BrowseColor = ({ color, numShades }) => {
       <div className="flex flex-wrap justify-center">
         {shades.map((shade, index) => (
           <div
-            className="flex flex-col justify-center items-center w-[150px] h-[150px] m-[5px] border-[1px] border-black rounded-md font-medium text-white text-lg"
+            className="flex flex-col justify-center items-center w-[160px] md:w-[320px] h-[160px] m-[5px] border-[1px] border-black rounded-md font-medium text-white text-lg"
             key={index}
             style={{ background: shade.hexString() }}
           >

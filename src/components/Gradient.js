@@ -74,7 +74,7 @@ const Gradient = () => {
             </div>
           </div>
           <div className="flex flex-col items-center my-10">
-            <div className="flex justify-center items-center md:text-[16px] bg-[#F8F8FF] rounded-2xl p-[7px] text-[8px]">
+            <div className="flex justify-center items-center md:text-lg bg-[#F8F8FF] rounded-2xl p-[7px] text-[10px]">
               <SyntaxHighlighter
                 language="css"
                 style={docco}
