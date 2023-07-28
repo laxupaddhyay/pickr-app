@@ -9,14 +9,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div>
-      <div>
-        <title>Pickr</title>
-        <meta
-          name="Pickr"
-          content="Colour Generator, Gradient Generator, Color Palette"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </div>
       <BrowserRouter>
         <header>
           <Header />

@@ -62,7 +62,6 @@ const Colors = () => {
               <SyntaxHighlighter
                 language="css"
                 style={docco}
-                customStyle={{ fontStyle: "italic" }}
               >
                 {output}
               </SyntaxHighlighter>
