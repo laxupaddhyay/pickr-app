@@ -49,6 +49,8 @@ const Header = () => {
       navigate("/gradient");
     } else if (type === "color-shades") {
       navigate("/color-shades");
+    } else if (type === "color-palette") {
+      navigate("/color-palette");
     }
     setMobileMenu(false);
   };
@@ -74,6 +76,12 @@ const Header = () => {
             onClick={() => navigationHandler("color-shades")}
           >
             List of Colors
+          </li>
+          <li
+            className="menuItem"
+            onClick={() => navigationHandler("color-palette")}
+          >
+            Color Palette
           </li>
         </ul>
 
