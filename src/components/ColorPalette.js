@@ -36,7 +36,9 @@ const ColorPalette = () => {
 
   return (
     <div style={{ width: "100vw", height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-      <h1 style={{ fontSize: "4rem", marginBottom: "1.5rem" }}>Color Palette</h1>
+      <div style={{ marginBottom: "1rem", textAlign: "center" }}>
+        <h1 style={{ fontSize: "3rem" }}>Color Palette</h1>
+      </div>
       {colors.map((color) => (
         <div
           key={color.color}
