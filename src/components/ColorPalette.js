@@ -24,10 +24,10 @@ const ColorPalette = () => {
     const brightness = (bgColor.match(/(\d+)/g) || []).reduce((a, b) => a + parseInt(b), 0) / 300;
 
     if (brightness < 0.1) {
-      return "white";
+      return "text-white";
     }
 
-    return brightness > 0.5 ? "black" : "white";
+    return brightness > 0.5 ? "text-black" : "text-white";
   };
 
   const copyToClipboard = (code) => {
@@ -35,27 +35,17 @@ const ColorPalette = () => {
   };
 
   return (
-    <div style={{ width: "100vw", height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-      <div style={{ marginBottom: "1rem", textAlign: "center" }}>
-        <h1 style={{ fontSize: "3rem" }}>Color Palette</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center">
+      <div className="mb-4 text-center">
+        <h1 className="text-4xl">Color Palette</h1>
       </div>
       {colors.map((color) => (
         <div
           key={color.color}
-          style={{
-            backgroundColor: color.color,
-            width: "100%",
-            height: "13%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            fontSize: "1.5rem",
-            color: getTextColor(color.color),
-          }}
+          style={{ backgroundColor: color.color }}
+          className={`w-full h-1/5 flex items-center justify-center cursor-pointer text-1.5rem ${getTextColor(color.color)}`}
           onClick={() => copyToClipboard(color.code)}
         >
-          {color.code}
         </div>
       ))}
     </div>
@@ -63,4 +53,3 @@ const ColorPalette = () => {
 };
 
 export default ColorPalette;
-          
