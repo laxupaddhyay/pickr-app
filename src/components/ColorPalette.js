@@ -36,7 +36,14 @@ const ColorPalette = () => {
 
   return (
     <div style={{ width: "100vw", height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-      <h1 style={{ fontSize: "4rem", marginBottom: "1.5rem" }}>Color Palette</h1>
+      //<div className="flex flex-col justify-center place-items-center items-center">
+          <div className="title flex flex-col items-center">
+            <h1 className="xs:text-5xl md:text-6xl font-bold">Color Palette</h1>
+            <span className="py-4 md:text-2xl sm:text-xl w-9/10 text-center xs:text-[12px] text-gray-900">
+              Enhance your pages
+            </span>
+          </div>
+     // <h1 style={{ fontSize: "4rem" }}>Color Palette</h1>
       {colors.map((color) => (
         <div
           key={color.color}
