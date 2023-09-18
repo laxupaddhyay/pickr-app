@@ -1,5 +1,4 @@
 import "./App.css";
-import {useEffect} from "react";
 import Colors from "./components/Colors";
 import Gradient from "./components/Gradient";
 import ColorShades from "./components/ColorShades";
@@ -9,21 +8,6 @@ import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  useEffect(() => {
-    window.addEventListener("beforeunload", (event) => {
-      event.preventDefault();
-      
-      event.returnValue = "";
-    });
-
-    return () => {
-      window.removeEventListener("beforeunload", (event) => {
-        event.preventDefault();
-        event.returnValue = "";
-      });
-    };
-  }, []);
-  
   return (
     <div>
       <BrowserRouter>
