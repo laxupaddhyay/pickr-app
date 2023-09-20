@@ -15,7 +15,8 @@
     "react-syntax-highlighter": "^15.5.0",
     "react-toastify": "^9.1.3",
     "values.js": "^2.1.1",
-    "color-scheme": ""
+    "color-scheme": "",
+    "chroma-js": ""
   },
   "scripts": {
     "start": "react-scripts start",
