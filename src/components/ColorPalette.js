@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import chroma from 'chroma-js';
+import colorScheme from 'color-scheme';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -11,14 +11,14 @@ function ColorPalette() {
   }, []);
 
   const generateColors = () => {
-    const darkColors = chroma.scale(['#000', '#333']).colors(2); // Two shades of dark colors
-    const lightColors = chroma.scale(['#f0f', '#ccf']).colors(2); // Three shades of light colors
-    const accentColors = chroma.scale(['#f90', '#f06']).colors(1); // Four shades of an accent color
+    const scheme = new colorScheme();
+    scheme.from_hue(Math.floor(Math.random() * 360))
+      .scheme('triade')
+      .variation('default');
 
-    const colorPalette = [...darkColors, ...lightColors, ...accentColors];
-
-    const capitalizedColors = colorPalette.map(color => color.toUpperCase());
-    setColors(capitalizedColors);
+    const colorList = scheme.colors().slice(0, 5); // Always start with the first 5 colors
+    const capitalizedColors = colorList.map(color => color.toUpperCase());
+    setColors(capitalizedColors.map(color => `#${color}`)); // Add "#" to each color code
   };
 
   const copyToClipboard = (color) => {
@@ -29,7 +29,7 @@ function ColorPalette() {
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: false,
-      theme: "dark",
+      theme: "dark", // Enable dark mode
     });
   };
 
