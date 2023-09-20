@@ -10,20 +10,23 @@ function ColorPalette() {
     generateColors();
   }, []);
 
+  // Generate a color palette using the color-scheme library
   const generateColors = () => {
     const scheme = new colorScheme();
     scheme.from_hue(Math.floor(Math.random() * 360))
       .scheme('triade')
       .variation('default');
 
-    const colorList = scheme.colors().slice(0, 5); // Always start with the first 5 colors
+    const colorList = scheme.colors().slice(0, 5);
     const capitalizedColors = colorList.map(color => color.toUpperCase());
-    setColors(capitalizedColors.map(color => `#${color}`)); // Add "#" to each color code
+    const colorCodesWithHash = capitalizedColors.map(color => `#${color}`);
+    setColors(colorCodesWithHash);
   };
 
+  // Copy a color code to the clipboard and show a toast notification
   const copyToClipboard = (color) => {
     navigator.clipboard.writeText(color);
-    toast.success('Copied ' + color, {
+    toast.success(`Copied ${color}`, {
       position: "top-center",
       autoClose: 1000,
       hideProgressBar: true,
@@ -35,14 +38,14 @@ function ColorPalette() {
 
   return (
     <div className="mt-2 text-center">
-      <h2 className="text-5xl font-bold">Colour Palette</h2>
+      <h1 className="text-5xl font-bold mt-10">Color Palette</h1>
       <span className="text-md text-gray-600 block mb-4">Enhance your webpages</span>
       <div className="color-container flex flex-wrap justify-center md:justify-start">
         {colors.map((color, index) => (
           <div key={index} className="w-screen md:w-1/5">
             <div
-              className="cursor-pointer"
-              style={{ backgroundColor: color, height: '100px' }}
+              className="cursor-pointer h-[100px] lg:h-[55vh]"
+              style={{ backgroundColor: color }}
             >
               <p
                 className="text-gray-700 cursor-pointer text-left items-center px-2"
@@ -55,7 +58,7 @@ function ColorPalette() {
         ))}
       </div>
       <button
-        className="mt-8 py-2 px-4 bg-black text-white hover:bg-gray-600 text-white rounded-lg shadow-md"
+        className="mt-8 py-2 px-4 bg-black hover:bg-gray-600 text-white rounded-lg shadow-md"
         onClick={generateColors}
       >
         Generate
