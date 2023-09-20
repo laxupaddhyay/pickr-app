@@ -13,7 +13,7 @@ function ColorPalette() {
   const generateColors = () => {
     const darkColors = chroma.scale(['#000', '#333']).colors(2); // Two shades of dark colors
     const lightColors = chroma.scale(['#f0f', '#ccf']).colors(3); // Three shades of light colors
-    const accentColors = chroma.scale(['#f90', '#f06']).colors(4); // Four shades of an accent color
+    const accentColors = chroma.scale(['#f90', '#f06']).colors(0); // Four shades of an accent color
 
     const colorPalette = [...darkColors, ...lightColors, ...accentColors];
 
