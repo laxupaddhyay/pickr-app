@@ -25,7 +25,7 @@ function ColorPalette() {
     navigator.clipboard.writeText(color);
     toast.success('Copied ' + color, {
       position: "top-center",
-      autoClose: 1500,
+      autoClose: 1000,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: false,
@@ -39,14 +39,14 @@ function ColorPalette() {
       <span className="text-lg text-gray-600 block mb-4">Enhance your webpages</span>
       <div className="color-container flex flex-wrap justify-center md:justify-start -mx-2">
         {colors.map((color, index) => (
-          <div key={index} className="color-box m-2 w-full sm:w-full md:w-1/3 lg:w-1/5">
+          <div key={index} className="color-box m-2 w-full md:w-1/3 lg:w-1/5 rounded-sm">
             <div
               className="color cursor-pointer"
               style={{ backgroundColor: color, height: '100px' }}
               onClick={() => copyToClipboard(color)}
             >
               <p
-                className="text-gray-700 mt-2 select-all cursor-pointer text-left px-2"
+                className="text-gray-700 mt-2 select-all cursor-pointer text-left items-center px-2"
                 onClick={() => copyToClipboard(color)}
               >
                 {color}
@@ -56,7 +56,7 @@ function ColorPalette() {
         ))}
       </div>
       <button
-        className="mt-8 py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-md"
+        className="mt-8 py-2 px-4 bg-black text-white hover:bg-gray-600 text-white rounded-sm shadow-md"
         onClick={generateColors}
       >
         Generate
