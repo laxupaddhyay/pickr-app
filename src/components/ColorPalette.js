@@ -35,11 +35,11 @@ function ColorPalette() {
 
   return (
     <div className="p-4 text-center">
-      <h2 className="text-4xl font-bold">Colour Palette</h2>
+      <h2 className="text-5xl font-bold">Colour Palette</h2>
       <span className="text-lg text-gray-600 block mb-4">Enhance your webpages</span>
-      <div className="color-container flex flex-wrap justify-center md:justify-start -mx-2">
+      <div className="color-container flex flex-wrap justify-center md:justify-start">
         {colors.map((color, index) => (
-          <div key={index} className="color-box m-2 w-full md:w-1/3 lg:w-1/5 rounded-sm">
+          <div key={index} className="color-box m-1 w-screen md:w-1/3 lg:w-1/5 rounded-md">
             <div
               className="color cursor-pointer"
               style={{ backgroundColor: color, height: '100px' }}
