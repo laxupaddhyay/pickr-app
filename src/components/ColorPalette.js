@@ -29,24 +29,23 @@ function ColorPalette() {
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: false,
-      theme: "dark", // Enable dark mode
+      theme: "dark",
     });
   };
 
   return (
-    <div className="p-4 text-center">
+    <div className="p-2 text-center">
       <h2 className="text-5xl font-bold">Colour Palette</h2>
-      <span className="text-lg text-gray-600 block mb-4">Enhance your webpages</span>
+      <span className="text-md text-gray-600 block mb-4">Enhance your webpages</span>
       <div className="color-container flex flex-wrap justify-center md:justify-start">
         {colors.map((color, index) => (
-          <div key={index} className="w-screen md:w-1/5 rounded-lg">
+          <div key={index} className="w-screen md:w-1/5">
             <div
-              className="color cursor-pointer"
+              className="cursor-pointer rounded-lg"
               style={{ backgroundColor: color, height: '100px' }}
-              onClick={() => copyToClipboard(color)}
             >
               <p
-                className="text-gray-700 mt-2 select-all cursor-pointer text-left items-center px-2"
+                className="text-gray-700 cursor-pointer text-left items-center px-2"
                 onClick={() => copyToClipboard(color)}
               >
                 {color}
