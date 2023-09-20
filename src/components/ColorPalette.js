@@ -39,7 +39,7 @@ function ColorPalette() {
       <span className="text-lg text-gray-600 block mb-4">Enhance your webpages</span>
       <div className="color-container flex flex-wrap justify-center md:justify-start">
         {colors.map((color, index) => (
-          <div key={index} className="color-box m-1 w-screen md:w-1/3 lg:w-1/5 rounded-md">
+          <div key={index} className="w-screen md:w-1/5 rounded-lg">
             <div
               className="color cursor-pointer"
               style={{ backgroundColor: color, height: '100px' }}
@@ -56,7 +56,7 @@ function ColorPalette() {
         ))}
       </div>
       <button
-        className="mt-8 py-2 px-4 bg-black text-white hover:bg-gray-600 text-white rounded-sm shadow-md"
+        className="mt-8 py-2 px-4 bg-black text-white hover:bg-gray-600 text-white rounded-lg shadow-md"
         onClick={generateColors}
       >
         Generate
