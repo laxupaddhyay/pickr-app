@@ -34,14 +34,14 @@ function ColorPalette() {
   };
 
   return (
-    <div className="p-2 text-center">
+    <div className="mt-2 text-center">
       <h2 className="text-5xl font-bold">Colour Palette</h2>
       <span className="text-md text-gray-600 block mb-4">Enhance your webpages</span>
       <div className="color-container flex flex-wrap justify-center md:justify-start">
         {colors.map((color, index) => (
           <div key={index} className="w-screen md:w-1/5">
             <div
-              className="cursor-pointer rounded-lg"
+              className="cursor-pointer"
               style={{ backgroundColor: color, height: '100px' }}
             >
               <p
