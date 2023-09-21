@@ -1,5 +1,6 @@
 import React from "react";
-import { FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {RiTwitterXFill} from "react-icons/ri"
 
 const links = [
   {
@@ -20,7 +21,7 @@ const links = [
     id: 3,
     href: "https://www.twitter.com/souravk_agarwal/",
     icon: (
-      <FaTwitter className="text-blue-500 hover:scale-105 text-md md:text-[24px]" />
+      <RiTwitterXFill className="text-white hover:scale-105 text-md md:text-[24px]" />
     ),
   },
   {
