@@ -10,10 +10,10 @@ import "../styles/color.css";
 
 const Colors = () => {
   const [currentColor, setCurrentColor] = useState({
-    r: Math.floor(Math.random() * 255 + 1),
-    g: Math.floor(Math.random() * 255 + 1),
-    b: Math.floor(Math.random() * 255 + 1),
-    a: Math.round(Math.random() * 100) / 100,
+    r: 255,
+    g: 255,
+    b: 255,
+    a: 1,
   });
   const [output, setOutput] = useState("");
 
@@ -45,7 +45,7 @@ const Colors = () => {
         <div className="flex flex-col justify-center items-center">
           <div className="title flex flex-col items-center">
             <h1 className="xs:text-5xl md:text-6xl font-bold">Colors</h1>
-            <span className="py-4 md:text-2xl sm:text-xl w-9/10 text-center xs:text-[12px] text-gray-900">
+            <span className="py-4 sm:text-lg w-9/10 text-center xs:text-[12px] text-gray-900">
               Select any color to copy hex code
             </span>
           </div>
